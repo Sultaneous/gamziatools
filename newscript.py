@@ -17,7 +17,7 @@ def main():
    if argc<=1:
       print(f"{C.clg}Syntax: {C.clc}newmodule.py {C.clm}[ModuleName]   {C.clr}# Do not include '.py' extension{C.coff}")
       exit()
-   
+
    # Fix up for module name errantly having .py in it
    fixup=argv[1]
    if (fixup.endswith(".py")):
@@ -25,7 +25,7 @@ def main():
 
    # Establish module name / also class name, etc...
    modulename=fixup[0].upper()+fixup[1:]
-   
+
    # Filename is the lowercase version of the module name
    filename=fixup.lower()+".py"
 
@@ -78,7 +78,7 @@ def main():
    "DEF_LOGFILE   = \"klogs.log\"    # Default log file\n",
    "DEF_ACCOUNTDB = \"kaccounts.db\" # Default accounts database\n",
    "DEF_AUTH      = False          # Require login?\n",
-   "DEF_OUTEXT    = ".txt"         # Default output file extension\n",
+   "DEF_OUTEXT    = \".txt\"       # Default output file extension\n",
    "\n",
    "# Global\n",
    "FLAG_KILL = False             # Used to trap Ctrl-C\n",
@@ -344,7 +344,7 @@ def main():
    "   try:\n",
    "       opts, args =getopt.getopt(argv[1:],\n",
    "        \"?SDvl:o\",\n",
-   "        [\"help\",\"version\",\"verbose\", \"DEBUG\", "log="])\n",
+   "        [\"help\",\"version\",\"verbose\", \"DEBUG\", \"log=\"])\n",
    "   except getopt.GetoptError as e:\n",
    "      error(f\"Arguments error: ({e.opt})=>{e.msg}\")\n",
    "      showHelp()\n",
